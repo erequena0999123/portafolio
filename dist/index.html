@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="es" data-theme="neon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Portafolio de Emmanuel Requena. Proyectos de desarrollo de software e IoT.">
+  <title>Emmanuel Requena · Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="projects.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main" data-t="skip">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="Emmanuel Requena">
+        <span class="brand-icon" aria-hidden="true">&lt;<b>/</b>&gt;</span>
+        <span>emmanuel<span class="brand-domain">.dev</span></span>
+      </a>
+      <nav class="nav" data-label="nav" aria-label="Navegación principal">
+        <a href="#proyectos" data-t="projects">Proyectos</a>
+        <a href="#perfil" data-t="about">Perfil</a>
+        <a href="#contacto" data-t="contact">Contacto</a>
+      </nav>
+      <div class="switch language" role="group" data-label="language" aria-label="Idioma">
+        <button type="button" data-lang="es" lang="es" aria-label="Español" aria-pressed="true">ES</button>
+        <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="shell">
+    <section id="inicio" class="hero" aria-labelledby="name">
+      <div class="intro">
+        <p class="eyebrow role"><span aria-hidden="true"></span><span data-t="role">Desarrollador de software</span></p>
+        <h1 id="name">Emmanuel<br><span>Requena</span><i aria-hidden="true">.</i></h1>
+        <p class="hero-description" data-t="intro">Mis proyectos van desde un prototipo IoT con monitoreo web hasta una aplicación de escritorio con base de datos.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#proyectos" data-t="seeProjects">Explorar proyectos</a>
+          <a class="button secondary" href="#contacto" data-t="contact">Contacto</a>
+        </div>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="code-window">
+          <div class="window-bar"><span class="traffic"><i></i><i></i><i></i></span><span>portfolio.json</span><span class="window-mark">{ }</span></div>
+          <div class="code-lines">
+            <div><span class="line-number">01</span><span class="code-punctuation">{</span></div>
+            <div><span class="line-number">02</span><span class="indent"><span class="code-key">"name"</span>: <span class="code-value">"Emmanuel Requena"</span>,</span></div>
+            <div><span class="line-number">03</span><span class="indent"><span class="code-key">"focus"</span>: <span class="code-value">"software"</span>,</span></div>
+            <div><span class="line-number">04</span><span class="indent"><span class="code-key">"languages"</span>: [<span class="code-value">"ES", "EN"</span>],</span></div>
+            <div><span class="line-number">05</span><span class="indent"><span class="code-key">"interests"</span>: [</span></div>
+            <div><span class="line-number">06</span><span class="indent deeper code-value">"Python", "web", "IoT"</span></div>
+            <div><span class="line-number">07</span><span class="indent">]</span></div>
+            <div><span class="line-number">08</span><span class="code-punctuation">}</span><span class="cursor"></span></div>
+          </div>
+          <div class="editor-footer"><span>JSON</span><span>UTF-8</span></div>
+        </div>
+        <div class="terminal-window code-window">
+          <div class="window-bar"><span class="traffic"><i></i><i></i><i></i></span><span>portfolio / shell</span><span class="window-mark">~</span></div>
+          <div class="terminal-lines">
+            <div><strong>~ $</strong> whoami</div>
+            <div class="terminal-output">Emmanuel Requena</div>
+            <div><strong>~ $</strong> ls interests/</div>
+            <div class="terminal-output">python/ web/ iot/</div>
+            <div><strong>~ $</strong><span class="cursor"></span></div>
+          </div>
+        </div>
+        <span class="grid-cross cross-top">+</span><span class="grid-cross cross-bottom">+</span>
+      </div>
+    </section>
+
+    <section id="proyectos" class="work section" aria-labelledby="work-heading">
+      <div class="section-heading">
+        <h2 id="work-heading" data-t="featured">Proyectos destacados</h2>
+        <div class="view-picker">
+          <span data-t="view">Vista</span>
+          <div class="switch" role="group" data-label="view" aria-label="Vista">
+            <button type="button" data-layout-option="cards" data-t="cards" aria-controls="project-grid" aria-pressed="true">Tarjetas</button>
+            <button type="button" data-layout-option="compact" data-t="compact" aria-controls="project-grid" aria-pressed="false">Compacta</button>
+            <button type="button" data-layout-option="carousel" data-t="carousel" aria-controls="project-grid" aria-pressed="false">Carrusel</button>
+          </div>
+        </div>
+      </div>
+      <div class="project-toolbar">
+        <div id="project-filters" class="switch filters" role="group" data-label="filters" aria-label="Filtrar proyectos"></div>
+        <div id="carousel-controls" class="switch" role="group" data-label="carouselNavigation" aria-label="Navegar el carrusel" hidden>
+          <button type="button" id="previous-project" data-t="previous" aria-controls="project-grid">Anterior</button>
+          <button type="button" id="next-project" data-t="next" aria-controls="project-grid">Siguiente</button>
+        </div>
+      </div>
+      <div id="project-grid" class="project-grid" data-layout="cards"></div>
+    </section>
+
+    <section id="perfil" class="section profile" aria-labelledby="profile-heading">
+      <h2 id="profile-heading" data-t="about">Perfil</h2>
+      <div class="profile-content">
+        <div><p data-t="bio"></p><p data-t="learning"></p></div>
+        <div class="profile-stack"><h3 data-t="tools">Tecnologías</h3><ul class="tags" aria-label="Tecnologías" data-label="tools"><li>Python</li><li>Java</li><li>MySQL</li><li>HTML / CSS / JavaScript</li><li>ESP8266</li></ul></div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading" data-t="contact">Contacto</h2>
+      <div id="contact-links" class="contact-links"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner">
+    <a href="#inicio" class="footer-name">Emmanuel Requena</a>
+    <div class="theme-picker">
+      <span data-t="appearance">Estilo</span>
+      <div class="switch theme" role="group" data-label="appearance" aria-label="Estilo">
+        <button type="button" data-theme-option="neon" data-t="neon" aria-pressed="true">Neón</button>
+        <button type="button" data-theme-option="editor" data-t="editor" aria-pressed="false">Editor</button>
+        <button type="button" data-theme-option="terminal" data-t="terminal" aria-pressed="false">Terminal</button>
+      </div>
+    </div>
+  </div></footer>
+
+  <template id="parking-visual">
+    <div class="project-visual parking-visual" aria-hidden="true">
+      <div class="mini-window parking-window">
+        <div class="mini-bar"><span class="window-status"></span><span>fisgonparking / dashboard</span><span class="mini-bar-right">IoT</span></div>
+        <div class="parking-lots"><i>P1</i><i>P2</i><i>P3</i><i>P4</i><i>P5</i><i>P6</i><i>P7</i><i>P8</i></div>
+      </div>
+    </div>
+  </template>
+  <template id="desktop-visual">
+    <div class="project-visual desktop-visual" aria-hidden="true">
+      <div class="mini-window desktop-window">
+        <div class="mini-bar"><span class="window-status"></span><span>TecniNova</span><span class="mini-bar-right">JAVA</span></div>
+        <div class="desktop-body">
+          <div class="desktop-sidebar"><i></i><i></i><i></i></div>
+          <div class="desktop-grid"><div><i></i><i></i><i></i></div><div><i></i><i></i><i></i></div><div><i></i><i></i><i></i></div></div>
+        </div>
+      </div>
+    </div>
+  </template>
+  <template id="minecraft-visual">
+    <div class="project-visual minecraft-visual" aria-hidden="true">
+      <div class="mini-window minecraft-window">
+        <div class="mini-bar"><span class="window-status"></span><span>commands.md</span><span class="mini-bar-right">MD</span></div>
+        <div class="minecraft-lines">
+          <div><span>#</span> Minecraft Command Library</div>
+          <div><span>&gt;</span> /scoreboard objectives list</div>
+          <div><span>{</span> "text": "Minecraft" <span>}</span></div>
+        </div>
+      </div>
+    </div>
+  </template>
+</body>
+</html>
